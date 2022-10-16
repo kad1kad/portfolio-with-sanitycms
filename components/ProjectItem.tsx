@@ -1,22 +1,15 @@
 import { Project } from "../typings";
 import Button from "./Button";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 type Props = {
   project: Project;
 };
 
 function ProjectItem({ project }: Props) {
-  const { scroll } = useLocomotiveScroll();
   console.log(project);
 
   return (
-    <div
-      className="mt-5 md:w-[40rem]"
-      data-scroll
-      data-scroll-section
-      data-scroll-speed="1"
-    >
+    <div className="mt-5 md:w-[40rem]">
       <div className="h-[40rem] py-1 relative">
         <div className="bg-violet-600/10 h-[40rem] w-[100%] blur-xl absolute" />
         <h4 className="font-semibold text-2xl my-5">{project.title}</h4>

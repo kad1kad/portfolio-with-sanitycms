@@ -2,8 +2,6 @@ import { motion, useAnimation } from "framer-motion";
 import { Skill } from "../typings";
 import SkillItem from "./SkillItem";
 
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-
 type Props = {
   skills: Skill[];
 };
@@ -11,21 +9,18 @@ type Props = {
 function SkillList({ skills }: Props) {
   console.log(skills);
 
-  const { scroll } = useLocomotiveScroll();
   return (
-    <div className="overflow-hidden py-3 relative" data-scroll-section>
+    <div className="overflow-hidden py-3 relative">
       <motion.h3
         className="font-extrabold text-5xl mb-5"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
           transition: {
-            duration: 2.8,
+            duration: 0.8,
           },
         }}
         viewport={{ once: true }}
-        data-scroll
-        data-scroll-speed="0"
       >
         I work with
       </motion.h3>
@@ -40,9 +35,6 @@ function SkillList({ skills }: Props) {
           },
         }}
         viewport={{ once: true }}
-        data-scroll
-        data-scroll-section
-        data-scroll-speed="-1"
       >
         {skills
           .map((skill) => <SkillItem key={skill._id} skill={skill} />)

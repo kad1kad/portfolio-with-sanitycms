@@ -2,10 +2,7 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
-    <div
-      className="py-10 flex flex-col items-center leading-10 h-44"
-      data-scroll-section
-    >
+    <div className="py-10 flex flex-col items-center leading-10 h-44">
       <p className="text-center font-light text-sm">
         Built with Next.js, TypeScript, TailwindCSS, Sanity CMS, Framer Motion.
       </p>
