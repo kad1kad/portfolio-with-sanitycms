@@ -11,18 +11,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       options={{
         smooth: true,
         inertia: 0.8,
-        multiplier: 3,
+        multiplier: 1.4,
+
         mobile: {
           breakpoint: 0,
           smooth: true,
           getDirection: true,
-          multiplier: 3,
         },
         tablet: {
           breakpoint: 0,
           smooth: true,
           getDirection: true,
-          multiplier: 3,
         },
         // ... all available Locomotive Scroll instance options
       }}
