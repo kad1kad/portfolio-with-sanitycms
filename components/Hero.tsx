@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { PageInfo } from "../typings";
+
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 type Props = {
   pageInfo: PageInfo;
@@ -8,6 +9,7 @@ type Props = {
 
 function Hero({ pageInfo }: Props) {
   console.log(pageInfo);
+  const { scroll } = useLocomotiveScroll();
   return (
     <motion.div
       className="h-screen flex flex-col justify-center items-center"
@@ -16,23 +18,18 @@ function Hero({ pageInfo }: Props) {
       transition={{
         duration: 1,
       }}
+      data-scroll-section
     >
-      <h1 className="text-6xl text-center font-extrabold md:text-8xl ">
+      <h1
+        className="text-6xl text-center font-extrabold md:text-8xl z-10"
+        data-scroll
+        data-scroll-speed="1"
+      >
         Hi, I'm {pageInfo.name}.
       </h1>
-      <h2 className="font-bold ">{pageInfo.role}</h2>
-
-      {/* <div className="pt-5 leading-7">
-        <Link href="#about">
-          <h4 className="heroLink">About</h4>
-        </Link>
-        <Link href="#skills">
-          <h4 className="heroLink">Skills</h4>
-        </Link>
-        <Link href="#projects">
-          <h4 className="heroLink">Projects</h4>
-        </Link>
-      </div> */}
+      <h2 className="font-bold z-10" data-scroll data-scroll-speed="0">
+        {pageInfo.role}
+      </h2>
     </motion.div>
   );
 }
