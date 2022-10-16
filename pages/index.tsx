@@ -9,7 +9,7 @@ import { PageInfo, Project, Skill } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
-import type { GetStaticProps } from "next";
+import type { GetServerSideProps, GetStaticProps } from "next";
 
 type Props = {
   pageInfo: PageInfo;
@@ -38,7 +38,7 @@ const Home = ({ pageInfo, skills, projects }: Props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
@@ -49,8 +49,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       skills,
     },
-
-    revalidate: 10,
   };
 };
 
