@@ -6,9 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        waves: "url('/img/waves.svg')",
-      },
       animation: {
         "gradient-x": "gradient-x 6s ease infinite",
         "gradient-y": "gradient-y 6s ease infinite",
