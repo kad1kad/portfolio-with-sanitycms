@@ -10,8 +10,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        smartphone: true,
-        tablet: true,
+        mobile: {
+          smooth: true,
+        },
+        tablet: {
+          smooth: true,
+        },
         // ... all available Locomotive Scroll instance options
       }}
       watch={
