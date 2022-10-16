@@ -25,7 +25,7 @@ function Hero({ pageInfo }: Props) {
         data-scroll
         data-scroll-speed="1"
       >
-        Hi, I&apos;m {pageInfo.name}.
+        Hi, I am {pageInfo.name}.
       </h1>
       <h2 className="font-bold z-10" data-scroll data-scroll-speed="0">
         {pageInfo.role}
