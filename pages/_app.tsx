@@ -10,16 +10,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
+        inertia: 0.8,
         mobile: {
           breakpoint: 0,
           smooth: true,
-          inertia: 0.8,
           getDirection: true,
         },
         tablet: {
           breakpoint: 0,
           smooth: true,
-          inertia: 0.8,
           getDirection: true,
         },
         // ... all available Locomotive Scroll instance options
