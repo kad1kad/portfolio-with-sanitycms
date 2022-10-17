@@ -30,10 +30,10 @@ function Hero({ pageInfo }: Props) {
         data-scroll
         data-scroll-speed={3}
       >
-        Hi, I am {pageInfo.name}.
+        Hi, I&apos;m {pageInfo.name}.
       </motion.h1>
       <motion.h2
-        className="font-bold z-10"
+        className="font-semibold z-10"
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -45,6 +45,10 @@ function Hero({ pageInfo }: Props) {
       >
         {pageInfo.role}
       </motion.h2>
+
+      <span className="z-10 text-2xl absolute bottom-24 animate-pulse">
+        &#8595;
+      </span>
 
       <motion.div
         className="absolute"
