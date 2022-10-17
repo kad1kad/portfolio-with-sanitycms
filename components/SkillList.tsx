@@ -14,11 +14,7 @@ function SkillList({ skills }: Props) {
   const yValue02 = useTransform(scrollYProgress, [0.3, 0.75, 1], [-50, -50, 0]);
 
   return (
-    <div
-      className="overflow-hidden py-3 relative"
-      data-scroll-section
-      data-scroll-class="skillList"
-    >
+    <div className="overflow-hidden py-3 relative" data-scroll-section>
       <motion.h3
         className="font-extrabold text-5xl mb-5 pt-7"
         style={{ y: yValue02 }}
