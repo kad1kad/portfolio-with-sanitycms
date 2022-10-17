@@ -20,7 +20,7 @@ function Hero({ pageInfo }: Props) {
       data-scroll-section
     >
       <motion.h1
-        className="text-6xl text-center font-extrabold md:text-8xl z-10"
+        className="text-6xl text-center font-bold md:text-8xl z-10 tracking"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -33,7 +33,7 @@ function Hero({ pageInfo }: Props) {
         Hi, I&apos;m {pageInfo.name}.
       </motion.h1>
       <motion.h2
-        className="font-semibold z-10"
+        className="font-medium z-10"
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
