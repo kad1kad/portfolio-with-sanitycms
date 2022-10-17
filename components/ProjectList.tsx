@@ -10,7 +10,7 @@ function ProjectList({ projects }: Props) {
   // console.log(projects);
 
   return (
-    <div className="py-10 w-full z-10">
+    <div className="w-full" data-scroll-section>
       <h2 className="text-5xl font-bold w-full">Projects</h2>
       <motion.div
         className="md:flex gap-5 justify-center"
