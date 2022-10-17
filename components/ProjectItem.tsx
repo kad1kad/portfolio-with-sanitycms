@@ -1,4 +1,3 @@
-import { useScroll, useTransform, motion } from "framer-motion";
 import { Project } from "../typings";
 import Button from "./Button";
 
