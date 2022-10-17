@@ -15,9 +15,14 @@ function ProjectItem({ project }: Props) {
         <h4 className="font-semibold text-2xl my-5">{project.title}</h4>
 
         <div>
-          <div className="flex flex-wrap gap-3 leading-3 h-16 text-transparent bg-clip-text bg-gradient-to-br from-slate-200  to-red-400">
+          <div className="flex flex-wrap gap-3 leading-5">
             {project.technologies.map((tech) => (
-              <p key={tech._id}>{tech.title}</p>
+              <p
+                className=" text-gradient bg-gradient-to-br from-rose-400/80 via-purple-500/80 to-red-500/80 "
+                key={tech._id}
+              >
+                {tech.title}
+              </p>
             ))}
           </div>
         </div>

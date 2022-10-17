@@ -29,7 +29,7 @@ function SkillList({ skills }: Props) {
       </motion.h3>
 
       <motion.div
-        className="flex gap-2 flex-wrap text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-rose-400 via-purple-500 to-red-500 animate-gradient-xy"
+        className="flex gap-2 flex-wrap text-5xl font-extrabold"
         style={{ y: yValue01 }}
         data-scroll
         data-scroll-speed={2}
