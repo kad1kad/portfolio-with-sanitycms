@@ -3,7 +3,7 @@ type Props = {};
 function Footer({}: Props) {
   return (
     <div
-      className="py-10 flex flex-col items-center leading-10 h-44"
+      className="py-10 flex flex-col items-center leading-10 h-44 justify-center"
       data-scroll-section
     >
       <p className="text-center font-light text-sm" data-scroll>
