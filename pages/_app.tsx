@@ -12,17 +12,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        multiplier: 1.5,
         smoothMobile: 0,
-        reloadOnContextChange: true,
+
         smartphone: {
           smooth: false,
-          lerp: 0.1,
-          breakpoint: 450,
-          touchMultiplier: 2,
         },
         tablet: {
-          smooth: 1,
+          smooth: true,
           breakpoint: 1024,
         },
       }}
