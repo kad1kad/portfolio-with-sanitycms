@@ -25,7 +25,7 @@ function ProjectItem({ project }: Props) {
         </div>
 
         <h4 className="font-semibold text-2xl pt-7 leading-10">Idea</h4>
-        <p className="max-w-[25rem]">{project.summary}</p>
+        <p className="max-w-[35rem]">{project.summary}</p>
 
         <div className="flex gap-3 bottom-5 absolute text-3xl ">
           <Button text="Code" link={project.linkToCode} />
